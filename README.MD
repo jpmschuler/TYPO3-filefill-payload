@@ -1,3 +1,7 @@
+[![CI](https://github.com/jpmschuler/TYPO3-filefill-payload/actions/workflows/ci.yml/badge.svg)](https://github.com/jpmschuler/TYPO3-tvplus-contentslide/actions/workflows/ci.yml)
+![PHP-v](https://shields.io/packagist/php-v/jpmschuler/filefill-payload)
+![Packagist](https://shields.io/packagist/v/jpmschuler/filefill-payload)
+
 TYPO3 EXT:filefill resource handler to supply working binary files
 ==
 

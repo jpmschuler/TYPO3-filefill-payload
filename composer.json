@@ -1,0 +1,92 @@
+{
+    "name": "jpmschuler/filefill-payload",
+    "description": "Addon for EXT:filefill to provide static file replacements for common binary formats",
+    "license": "GPL-2.0-or-later",
+    "type": "typo3-cms-extension",
+    "authors": [
+        {
+            "name": "J. Peter M. Schuler",
+            "email": "j.peter.m.schuler@uni-due.de"
+        }
+    ],
+    "require": {
+        "ichhabrecht/filefill": "^4.2"
+    },
+    "require-dev": {
+        "ergebnis/composer-normalize": "^2.28",
+        "friendsofphp/php-cs-fixer": "^v3.1.0",
+        "saschaegerer/phpstan-typo3": "^1",
+        "sebastian/phpcpd": "^6.0.3",
+        "squizlabs/php_codesniffer": "^3.6",
+        "ssch/typo3-rector": "^1",
+        "typo3/tailor": "^1.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "Jpmschuler\\FilefillPayload\\": "Classes/"
+        }
+    },
+    "config": {
+        "allow-plugins": {
+            "typo3/cms-composer-installers": true,
+            "typo3/class-alias-loader": true,
+            "ergebnis/composer-normalize": true
+        },
+        "bin-dir": ".Build/bin",
+        "sort-packages": true,
+        "vendor-dir": ".Build/vendor"
+    },
+    "extra": {
+        "typo3/cms": {
+            "app-dir": ".Build",
+            "extension-key": "filefill_payload",
+            "web-dir": ".Build/public"
+        }
+    },
+    "scripts": {
+        "codequality": [
+            "@lint:php-cs-fixer",
+            "@lint:all",
+            "@rector:dry-run"
+        ],
+        "codequality:autofix": [
+            "@lint:php-cs-fixer",
+            "@lint:phpcbf",
+            "@rector"
+        ],
+        "develop:deploy": "[ -f ./.deploy.sh ] && ./.deploy.sh",
+        "git:precommit": [
+            "@lint:php-cs-fixer:dry-run",
+            "@lint:phpcs:dry-run",
+            "@lint:phpcpd",
+            "@lint:xliff"
+        ],
+        "lint:all": [
+            "@lint:php",
+            "@lint:php-cs-fixer:dry-run",
+            "@lint:phpcs:dry-run",
+            "@lint:phpcpd",
+            "@lint:phpstan"
+        ],
+        "lint:php": "find *.php Classes -name '*.php' -print0 | xargs -0 -n 1 -P 4 php -l",
+        "lint:php-cs-fixer": "php-cs-fixer fix",
+        "lint:php-cs-fixer:dry-run": "php-cs-fixer fix --dry-run --using-cache=no --diff",
+        "lint:phpcbf": "phpcbf Classes",
+        "lint:phpcpd": "phpcpd Classes",
+        "lint:phpcs": "@lint:phpcbf",
+        "lint:phpcs:dry-run": "phpcs Classes",
+        "lint:phpstan": "phpstan --level=$(composer config extra.codequality.phpstan-level 2> /dev/null || echo 5) --memory-limit=1G analyse",
+        "lint:phpstan:ci": "phpstan --level=$(composer config extra.codequality.phpstan-level 2> /dev/null || echo 5) --memory-limit=1G --no-progress --error-format=gitlab analyse > report.phpstan.json",
+        "lint:xliff": "xmllint --schema .Build/xliff-core-1.2-strict.xsd --noout $(find Resources/Private/Language -name '*.xlf')",
+        "lint:xliff:installPrerequisites": "wget -q -O .Build/xliff-core-1.2-strict.xsd https://docs.oasis-open.org/xliff/v1.2/os/xliff-core-1.2-strict.xsd",
+        "rector": [
+            "rector process --config=rector.php . ",
+            "@lint:php-cs-fixer"
+        ],
+        "rector:dry-run": "rector process --config=rector.php --dry-run --  .",
+        "rector:dry-run:ci": "rector process --config=rector.php --dry-run --output-format json -- . > report.rector.json",
+        "rector:force": "rector process .",
+        "test": "echo \"no unit tests, skipped\"",
+        "version:set:ext_emconf.php": "tailor set-version"
+    }
+}

@@ -1,0 +1,40 @@
+###################
+# project specific
+###################
+# OS
+###################
+.scannerwork
+.DS_Store
+.DS_Store?
+._*
+.project
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+###################
+# build tools
+###################
+/node_modules
+/vendor
+/typo3
+/.Build
+/target
+/.sonar
+###################
+# IntelliJ
+###################
+/.idea
+/*.cache
+####
+# ddev
+####
+/var/
+/.cache
+/Tests/Output
+/*deprecations*.xml
+/*report*.xml
+/.deploy.sh
+/typoscript-lint.yml
+/report.*
+/.cache*

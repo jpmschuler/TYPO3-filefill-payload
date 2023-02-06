@@ -1,0 +1,8 @@
+parameters:
+    paths:
+      - Classes
+    bootstrapFiles:
+      - .Build/vendor/autoload.php
+      - .phpstan.constants.php
+    scanDirectories:
+      - Classes

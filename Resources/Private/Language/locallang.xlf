@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns:t3="http://typo3.org/schemas/xliff" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file source-language="en" original="messages" datatype="plaintext" product-name="filefill_payload" date="2023-02-06T23:06:06+01:00">
+		<body>
+			<trans-unit id="resourceHandler.label" resname="resourceHandler.label">
+				<source>List of file extensions for replacement with staticBinaries</source>
+			</trans-unit>
+			<trans-unit id="resourceHandler.title" resname="resourceHandler.title">
+				<source>Static binary resources</source>
+			</trans-unit>
+		</body>
+	</file>
+</xliff>

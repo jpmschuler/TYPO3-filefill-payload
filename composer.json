@@ -43,6 +43,9 @@
             "app-dir": ".Build",
             "extension-key": "filefill_payload",
             "web-dir": ".Build/public"
+        },
+        "codequality": {
+            "phpstan-level": "5"
         }
     },
     "scripts": {

@@ -17,7 +17,7 @@ class StaticBinariesResourceHandler implements RemoteResourceInterface
     {
         if (!$configuration) {
             $this->handledExtList = self::AVAILABLE_EXT_LIST;
-        } elseif (strpos($configuration, ',')) {
+        } elseif (!is_array($configuration) && strpos($configuration, ',')) {
             $this->handledExtList = explode(',', $configuration);
         } else {
             $this->handledExtList = $configuration;

@@ -7,7 +7,7 @@ lint:php:
   stage: codequality
   parallel:
     matrix:
-      - PHPVERSION: ['7.4', '8.0', '8.1']
+      - PHPVERSION: ["7.4", "8.0", "8.1"]
   script:
     - composer run lint:php
 

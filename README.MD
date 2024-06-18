@@ -7,12 +7,11 @@
 [![TYPO3 V9](https://img.shields.io/badge/TYPO3-9-orange.svg?logo=typo3)](https://get.typo3.org/version/9)
 [![TYPO3 V10](https://img.shields.io/badge/TYPO3-10-orange.svg?logo=typo3)](https://get.typo3.org/version/10)
 [![TYPO3 V11](https://img.shields.io/badge/TYPO3-11-orange.svg?logo=typo3)](https://get.typo3.org/version/11)
-[![TYPO3 V12](https://img.shields.io/badge/TYPO3-12-orange.svg?logo=typo3)]([https://get.typo3.org/version/12](https://packagist.org/packages/typo3/cms-core#dev-main))
+[![TYPO3 V12](https://img.shields.io/badge/TYPO3-12-orange.svg?logo=typo3)](<[https://get.typo3.org/version/12](https://packagist.org/packages/typo3/cms-core#dev-main)>)
 
 ![Packagist](https://shields.io/packagist/v/jpmschuler/filefill-payload)
 
-TYPO3 EXT:filefill_payload
-==
+# TYPO3 EXT:filefill_payload
 
 A TYPO3 EXT:filefill resource handler to supply working binary files.
 
@@ -36,6 +35,7 @@ provides the ResourceHandler
 
 Example Configuration (if list of extensions is empty, the default value
 `7z,avi,ext,flv,mov,mp4,pdf,rar,rm,webm,zip`is used):
+
 ```php
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['filefill']['storages'][1] = [
     [
@@ -45,8 +45,7 @@ $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['filefill']['storages'][1] = [
 ];
 ```
 
-
-|                  | URL                                                      |
-|------------------|----------------------------------------------------------|
-| **Repository:**  | https://github.com/jpmschuler/typo3-filefill-payload     |
-| **TER:**         | https://extensions.typo3.org/extension/filefill-payload  |
+|                 | URL                                                     |
+| --------------- | ------------------------------------------------------- |
+| **Repository:** | https://github.com/jpmschuler/typo3-filefill-payload    |
+| **TER:**        | https://extensions.typo3.org/extension/filefill-payload |

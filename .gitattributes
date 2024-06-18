@@ -12,6 +12,7 @@
 /.php-cs-fixer.php export-ignore
 /.phpcs.xml export-ignore
 /.phpstan.constants.php export-ignore
+/.prettierignore export-ignore
 /GitVersion.yml export-ignore
 /README.md export-ignore
 /Tests export-ignore

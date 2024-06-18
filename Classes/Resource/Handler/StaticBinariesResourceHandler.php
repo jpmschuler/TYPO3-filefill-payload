@@ -33,7 +33,7 @@ class StaticBinariesResourceHandler implements RemoteResourceInterface
     public function hasFile($fileIdentifier, $filePath, FileInterface $fileObject = null)
     {
         $fileInfo = pathinfo($fileIdentifier);
-        if (in_array($fileInfo['extension'], $this->handledExtList, true)) {
+        if (isset($fileInfo['extension']) && in_array($fileInfo['extension'], $this->handledExtList, true)) {
             return true;
         }
         return false;

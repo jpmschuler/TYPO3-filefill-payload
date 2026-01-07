@@ -34,13 +34,13 @@ provides the ResourceHandler
 [`placeholder.com`](https://github.com/IchHabRecht/filefill#placeholdercom).
 
 Example Configuration (if list of extensions is empty, the default value
-`7z,avi,ext,flv,mov,mp4,pdf,rar,rm,webm,zip`is used):
+`7z,avi,flv,mov,mp4,pdf,rar,rm,webm,zip` is used):
 
 ```php
 $GLOBALS['TYPO3_CONF_VARS']['EXTCONF']['filefill']['storages'][1] = [
     [
         'identifier' => 'staticbinaries',
-        'configuration' => '7z,avi,ext,flv,mov,mp4,pdf,rar,rm,webm,zip'
+        'configuration' => '7z,avi,flv,mov,mp4,pdf,rar,rm,webm,zip'
     ]
 ];
 ```

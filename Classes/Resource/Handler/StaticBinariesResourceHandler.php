@@ -10,7 +10,7 @@ class StaticBinariesResourceHandler implements RemoteResourceInterface
 {
     protected $handledExtList = [];
 
-    protected const AVAILABLE_EXT_LIST = ['7z', 'avi', 'ext', 'flv', 'mov', 'mp4', 'pdf', 'rar', 'rm', 'webm', 'zip'];
+    protected const AVAILABLE_EXT_LIST = ['7z', 'avi', 'flv', 'mov', 'mp4', 'pdf', 'rar', 'rm', 'webm', 'zip'];
     protected const PATH_PREFIX = 'EXT:filefill_payload/Resources/Public/Payload/example';
 
     public function __construct($configuration)

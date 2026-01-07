@@ -12,7 +12,7 @@ use Ssch\TYPO3Rector\Set\Typo3LevelSetList;
 return static function (RectorConfig $rectorConfig): void {
     $parameters = $rectorConfig->parameters();
     $parameters->set(Typo3Option::TYPOSCRIPT_INDENT_SIZE, 2);
-    $rectorConfig->import(Typo3LevelSetList::UP_TO_TYPO3_10);
+    $rectorConfig->import(Typo3LevelSetList::UP_TO_TYPO3_12);
     $rectorConfig->phpVersion(PhpVersion::PHP_74);
     $rectorConfig->importNames();
     $rectorConfig->skip([

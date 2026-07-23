@@ -1,7 +1,7 @@
 {
     "name": "jpmschuler/filefill-payload",
     "description": "Addon for EXT:filefill to provide static file replacements for common binary formats",
-    "license": "GPL-2.0-or-later",
+    "license": ["GPL-2.0-or-later"],
     "type": "typo3-cms-extension",
     "authors": [
         {

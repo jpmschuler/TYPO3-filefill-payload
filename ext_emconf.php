@@ -10,7 +10,7 @@ $EM_CONF[$_EXTKEY] = [
     'constraints' => [
         'depends' => [
             'filefill' => '*',
-            'typo3' => '8.7.0-12.1.99'
+            'typo3' => '12.4.0-12.4.99'
         ]
     ]
  ];

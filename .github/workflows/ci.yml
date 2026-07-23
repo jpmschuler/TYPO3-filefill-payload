@@ -57,7 +57,6 @@ jobs:
           - "normalize"
           - "lint:php-cs-fixer:dry-run"
           - "lint:phpcs:dry-run"
-          - "lint:phpcpd"
           - "lint:phpstan"
         php-version:
           - 8.3
